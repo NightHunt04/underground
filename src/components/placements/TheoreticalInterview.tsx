@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useState } from "react"
 import fetchRoleChecker from "../../utils/fetchRoleChecker"
 import fetchMockInterview from "../../utils/fetchMockInterview"

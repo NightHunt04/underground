@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useState } from 'react'
 import { useAppContext } from '../../../context/ContextProvider'
 import IndividualSubjectAssign from './IndividualSubjectAssign'

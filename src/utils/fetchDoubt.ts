@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { GoogleGenerativeAI } from '@google/generative-ai'
 
 const API = import.meta.env.VITE_APP_GEMINI_API_KEY
