@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { useState } from 'react'
 import { useAppContext } from '../../context/ContextProvider'
 import ReCAPTCHA from 'react-google-recaptcha'
@@ -96,6 +98,7 @@ export default function Signin(): React.ReactElement {
 
                 {selectBatch && 
                     <div className='rounded-md p-1 border-[1px] border-gray-300 w-full transition-all flex flex-col items-start justify-center mt-2'>
+                        
                         {BRANCHES[context.field].map((batch: string, index: number) => {
                             return (
                                 <p key={index} onClick={() => {

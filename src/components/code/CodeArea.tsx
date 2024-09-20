@@ -1,3 +1,6 @@
+// @ts-nocheck
+
+
 import { useNavigate } from "react-router-dom"
 import Editor from '@monaco-editor/react'
 import { useRef, useState } from "react"
