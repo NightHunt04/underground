@@ -261,7 +261,7 @@ export default function SpeechTest() {
                     placeholder="Skills here (add by separating with commmas ',')"
                     onKeyDown={e => e.key === 'Enter' && handleSelectRole()}
                     className="bg-transparent w-full outline-none px-5 py-3" />
-                <button onClick={() => handleSelectRole} className="hover:opacity-80 px-8 transition-all py-3 rounded-r-lg hover:bg-gray-100"><i className="fa-solid fa-arrow-up"></i></button>
+                <button onClick={handleSelectRole} className="hover:opacity-80 px-8 transition-all py-3 rounded-r-lg hover:bg-gray-100"><i className="fa-solid fa-arrow-up"></i></button>
             </div> 
 
             {loader && <div className="flex items-center justify-center w-full mt-16">Checking the role&nbsp;&nbsp;&nbsp;<div className="lds-ring"><div></div><div></div><div></div><div></div></div></div>}
