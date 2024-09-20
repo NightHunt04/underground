@@ -69,7 +69,7 @@ export default async function fetchSpeechTest(nounce: number, userResponse: stri
 
 const speak = async (text: string): Promise<void> => {
     try {
-        const response = await fetch('http://localhost:8000/generate-audio', {
+        const response = await fetch('https://speak-dplr.onrender.com/generate-audio', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
