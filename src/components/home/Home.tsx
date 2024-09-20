@@ -1,5 +1,5 @@
 import SideNavBar from './left-bar/SideNavBar'
-import Main from './center-bar/Main'
+// import Main from './center-bar/Main'
 import { Outlet } from 'react-router-dom'
 
 export default function Home() {
