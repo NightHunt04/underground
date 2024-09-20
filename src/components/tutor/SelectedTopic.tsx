@@ -255,7 +255,7 @@ export default function SelectedTopic({ selectSubjectIndex, selectSubjectTopicIn
                                 dangerouslySetInnerHTML={{ __html: formatText(content[1]) }}>
                             </pre>
                             
-                            {content[2] && content[2] !== '' && content[2].length !== 0 && <div className='mt-5 w-full'>
+                            {content[2].length !== 0 && <div className='mt-5 w-full'>
                                     <SyntaxHighlighter className="rounded-md" language={SUBJECTS_INFO[selectSubjectIndex].lang} style={vscDarkPlus}>
                                         { content[2] }
                                     </SyntaxHighlighter>

@@ -13,7 +13,10 @@ export default function SideNavBar() {
 
   return (
     <div className='sticky top-3 left-0 flex flex-col min-h-[96vh] items-center justify-start p-5 rounded-lg bg-white drop-shadow-lg w-[20vw]'>
-        <img src="/assets/logo.jpg" alt="logo" className='w-[100px] h-auto object-cover my-10' />
+        <div className='flex items-start justify-start gap-5'>
+          <img src="/assets/govr.png" alt="" className='w-[40px] h-auto object-cover my-10'/>
+          <img src="/assets/logo.jpg" alt="logo" className='w-[100px] h-auto object-cover my-10' />
+        </div>
 
         <div className='flex items-start justify-center w-full gap-2 pb-10'>
           <img src="/assets/nemish.webp" alt="student" className='w-[40%] h-auto rounded-md' />

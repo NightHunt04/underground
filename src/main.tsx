@@ -18,6 +18,8 @@ import AllCompanies from './components/placements/AllCompanies.tsx'
 import MockTest from './components/placements/MockTest.tsx'
 import Preparation from './components/placements/Preparation.tsx'
 import SpeechTest from './components/placements/SpeechTest.tsx'
+import TheoreticalInterview from './components/placements/TheoreticalInterview.tsx'
+import MachineCoding from './components/placements/MachineCoding.tsx'
 
 const router = createBrowserRouter([
   {
@@ -53,8 +55,16 @@ const router = createBrowserRouter([
                 element: <Preparation />,
                 children: [
                   {
+                    path: 'theoretical-test',
+                    element: <TheoreticalInterview />
+                  },
+                  {
                     path: 'speech-test',
                     element: <SpeechTest />
+                  },
+                  {
+                    path: 'machine-coding',
+                    element: <MachineCoding />
                   }
                 ]
               }

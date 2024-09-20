@@ -38,7 +38,7 @@ export default function Signin(): React.ReactElement {
         // backend logic for auth
 
 
-        navigate('/student/ajknf93u2j4i')
+        navigate('/student/ajknf93u2j4i/subjects')
     }
 
     const handleSingin = (): void => {
