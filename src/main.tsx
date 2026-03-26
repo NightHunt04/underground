@@ -20,6 +20,10 @@ import Preparation from './components/placements/Preparation.tsx'
 import SpeechTest from './components/placements/SpeechTest.tsx'
 import TheoreticalInterview from './components/placements/TheoreticalInterview.tsx'
 import MachineCoding from './components/placements/MachineCoding.tsx'
+import Announcements from './components/announcements/Announcements.tsx' 
+import DocEditor from './components/docs/DocEditor.tsx' 
+import { CookiesProvider } from 'react-cookie'
+import Syllabus from './components/syllabus/Syllabus.tsx'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +37,10 @@ const router = createBrowserRouter([
           {
             path: 'subjects',
             element: <Main />,
+          },
+          {
+            path: 'syllabus', 
+            element: <Syllabus />
           },
           {
             path: 'placements',
@@ -85,6 +93,14 @@ const router = createBrowserRouter([
           {
             path: 'gen-syllabus-ques',
             element: <SyllabusQues />
+          },
+          {
+            path: 'announcements', 
+            element: <Announcements />
+          },
+          {
+            path: 'subjects/doc/:assignmentId',
+            element: <DocEditor />
           }
         ]
       },
@@ -102,8 +118,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ContextProvider>
-      <RouterProvider router={router} />
-    </ContextProvider>
+    <CookiesProvider>
+      <ContextProvider>
+        <RouterProvider router={router} />
+      </ContextProvider>
+    </CookiesProvider>
   </StrictMode>,
 )
