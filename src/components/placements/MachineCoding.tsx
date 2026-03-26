@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Editor from '@monaco-editor/react';
 import fetchRoleChecker from "../../utils/fetchRoleChecker";
@@ -51,7 +51,7 @@ export default function MachineCoding() {
     const [language, setLanguage] = useState<string>('javascript');
     
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const editorRef = useRef<any>(null);
+    // const editorRef = useRef<any>(null);
 
     const LANGUAGE_OPTIONS = ['javascript', 'python', 'java', 'cpp', 'csharp'];
 

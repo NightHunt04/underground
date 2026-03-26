@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useAppContext } from "../../context/ContextProvider";
-import { StudentAssignment } from "../../api/assignment";
 
 interface Response {
     response: {
@@ -142,7 +141,7 @@ export default function QuickQuiz ({ selectSubjectAssignmentIndex, selectSubject
         return { code: input.trim(), language: null };
     }
 
-    const currentSubject = context?.subjects?.find(s => s._id === selectSubjectId)
+    // const currentSubject = context?.subjects?.find(s => s._id === selectSubjectId)
     const currentSubjectAssignments = context?.assignments?.filter(a => a.subject._id === selectSubjectId) || []
     const currentAssignment = currentSubjectAssignments[selectSubjectAssignmentIndex]
 
@@ -159,7 +158,7 @@ export default function QuickQuiz ({ selectSubjectAssignmentIndex, selectSubject
             <div className="flex flex-col items-start justify-start gap-3 w-full mt-10">
 
                 {/* show all the subject button */}
-                {context?.subjects?.map((sub, index: number) => {
+                {context?.subjects?.map((sub, _index: number) => {
                     // Filter assignments for this specific subject to pass to AssignmentList
                     const filteredAssignments = context?.assignments?.filter(a => a.subject._id === sub._id) || []
 

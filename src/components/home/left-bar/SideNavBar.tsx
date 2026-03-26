@@ -5,7 +5,7 @@ import { useCookies } from 'react-cookie'
 export default function SideNavBar() {
   const navigate = useNavigate()
     const context = useAppContext()
-    const [cookie, setCookie, removeCookie] = useCookies(['user'])
+    const [cookie, removeCookie] = useCookies(['user'])
 
     const handleLogout = () => {
         // 1. Remove the cookie

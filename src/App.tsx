@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom"
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { useAppContext } from "./context/ContextProvider"
+// import { useAppContext } from "./context/ContextProvider"
 import { useCookies } from "react-cookie"
 
 function App(): React.ReactElement {
-  const context = useAppContext()
+  // const context = useAppContext()
   const [cookies] = useCookies(['user'])
   const navigate = useNavigate()
 
